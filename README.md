@@ -12,6 +12,7 @@ Botpress V12 OSS deployement at Aikyam
 - [ ] Use pm2 for resilience
 - [ ] Install dokku to manage the instance ( recommended by botpress )
 - [ ] Configure PostgresSQL server using dokku
+- [ ] Write a doc for configuring a telegram bot ( or link to the botpress guide )
 
 ## Server Specs
 - Documentation recommends 2Gb for botpress and another 4Gb for the PostgresSQL instance.
