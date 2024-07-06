@@ -1,0 +1,17 @@
+[Unit]
+Description=Botpress Instance
+After=postgresql.service
+
+[Service]
+ExecStart=/home/ubuntu/dev/bp
+Type=exec
+Restart=always
+User=ubuntu
+WorkingDirectory=/home/ubuntu/dev
+Environment=EXTERNAL_URL="https://botpress.aikyamsolve.org"
+Environment=DATABASE_URL="postgres://botpress:aikyam@localhost/botpress_db"
+Environment=BP_PRODUCTION=true
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

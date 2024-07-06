@@ -6,11 +6,11 @@ Botpress V12 OSS deployement at Aikyam
 
 ## TO-DO
 - [x] Create an EC2 instance ( Ubuntu 18.04 ) Installed 22.04 as the other options weren't feasible
-- [ ] Install Botpress ( configure a systemd unit ) Installting version: v12_30_6
+- [x] Install Botpress ( configure a systemd unit ) Installting version: v12_30_6
 - [x] Configure TLS using certbot [Followed this guide](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
 - [x] Configure Nginx Reverse Proxy
 - [x] Install and configure a postgres instance [github link to dockerfile](https://github.com/botpress/v12/blob/b9589a82f208efd4a14377abde86e974566035a0/examples/docker-compose/docker-compose-community-nginx-https.yaml)
-- [ ] Configure botpress config file to include external URL [Config Schema](https://github.com/botpress/v12/blob/master/packages/bp/src/core/config/botpress.config.ts)
+- [x] Configure botpress config file to include external URL [Config Schema](https://github.com/botpress/v12/blob/master/packages/bp/src/core/config/botpress.config.ts) [ I declared it as an environment variable in the service file ]
 - [ ] Use pm2 for resilience ( I personally think, using existing software like systemd is sufficient )
 - [ ] Install dokku to manage the instance ( recommended by botpress )
 - [x] Configure PostgresSQL server using dokku ( Better configuration would be to install it manually ) [ Installed manually ]
