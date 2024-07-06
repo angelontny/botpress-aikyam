@@ -10,10 +10,10 @@ Botpress V12 OSS deployement at Aikyam
 - [x] Configure TLS using certbot [Followed this guide](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
 - [x] Configure Nginx Reverse Proxy
 - [ ] Install and configure a postgres instance [github link to dockerfile](https://github.com/botpress/v12/blob/b9589a82f208efd4a14377abde86e974566035a0/examples/docker-compose/docker-compose-community-nginx-https.yaml)
-- [ ] Configure botpress config file to include external URL
-- [ ] Use pm2 for resilience
+- [ ] Configure botpress config file to include external URL [Config Schema](https://github.com/botpress/v12/blob/master/packages/bp/src/core/config/botpress.config.ts)
+- [ ] Use pm2 for resilience ( I personally think, using existing software like systemd is sufficient )
 - [ ] Install dokku to manage the instance ( recommended by botpress )
-- [ ] Configure PostgresSQL server using dokku
+- [ ] Configure PostgresSQL server using dokku ( Better configuration would be to install it manually )
 - [ ] Write a doc for configuring a telegram bot ( or link to the botpress guide )
 
 ## Server Specs
@@ -36,4 +36,4 @@ Botpress V12 OSS deployement at Aikyam
     ```
     [emerg] 1591#1591: "http" directive is not allowed here in /etc/nginx/sites-enabled/botpress:1
     ```
-- [ ] Why install redis? ( need to check the github repo )
+- [x] Why install redis? ( Used for hosting multiple botpress servers simultaneously, currently not required )
