@@ -11,18 +11,15 @@ Botpress V12 OSS deployement at Aikyam
 - [x] Configure Nginx Reverse Proxy
 - [x] Install and configure a postgres instance [github link to dockerfile](https://github.com/botpress/v12/blob/b9589a82f208efd4a14377abde86e974566035a0/examples/docker-compose/docker-compose-community-nginx-https.yaml)
 - [x] Configure botpress config file to include external URL [Config Schema](https://github.com/botpress/v12/blob/master/packages/bp/src/core/config/botpress.config.ts) [ I declared it as an environment variable in the service file ]
-- [ ] Use pm2 for resilience ( I personally think, using existing software like systemd is sufficient )
-- [ ] Install dokku to manage the instance ( recommended by botpress )
 - [x] Configure PostgresSQL server using dokku ( Better configuration would be to install it manually ) [ Installed manually ]
-- [ ] Write a doc for configuring a telegram bot ( or link to the botpress guide )
-- [ ] Verify if instance satisfies the official [checklist](https://github.com/botpress/v12/blob/b9589a82f208efd4a14377abde86e974566035a0/docs/docs/enterprise/server-and-cicd-management/production-checklist.md)
+- [x] Verify if instance satisfies the official [checklist](https://github.com/botpress/v12/blob/b9589a82f208efd4a14377abde86e974566035a0/docs/docs/enterprise/server-and-cicd-management/production-checklist.md)
 - [x] Update the system 
     ```
     # OpenSSH CVE-2024-6387 has been fixed for 22.04 LTS, 23.10 and 24.04 LTS.
     # RegreSSHion: Possible RCE Due To A Race Condition In Signal Handling.
     # For more details see: https://ubuntu.com/security/notices/USN-6859-1.
     ```
-
+- [ ] Configure CORS
 ## Server Specs
 - Documentation recommends 2Gb for botpress and another 4Gb for the PostgresSQL instance.
 - Current setup: 2vCPUs ( x86 ), 8Gb memory, 40Gb disk
